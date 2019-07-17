@@ -119,7 +119,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -130,7 +130,69 @@ table {
 * {
   box-sizing: border-box;
 }
+.border {
+  border: 1px solid #0a0a0a;
+}
 html,
 body {
   height: 100%;
+  background: #0f0f0f;
+}
+main {
+  width: 80%;
+  margin: 10%;
+  background: #686868;
+  border: 1px solid #0a0a0a;
+}
+nav {
+  width: 100%;
+  background: #0a0a0a;
+  padding: 3% 0;
+  display: flex;
+  justify-content: flex-end;
+}
+nav a {
+  padding: 0 2%;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+.header {
+  display: flex;
+}
+.header .me {
+  width: 75%;
+  padding: 5% 3%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.header .me .pic {
+  width: 40%;
+}
+.header .me .pic img {
+  max-width: 100%;
+  height: auto;
+}
+.header .me .title {
+  padding: 0 5%;
+  color: #0a0a0a;
+}
+.header .me .title h1 {
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.header .me .title h2 {
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+.header address {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  padding-top: 5%;
+  line-height: 1.5;
+}
+.header address h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
