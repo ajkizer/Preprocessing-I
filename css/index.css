@@ -1,1 +1,422 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: calc(1rem + ((1vw - 4.8px) * 1.1111));
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+.border {
+  border: 1px solid #0c0c0c;
+}
+html,
+body {
+  height: 100%;
+  background: #262626;
+  color: #0c0c0c;
+}
+main {
+  width: 80%;
+  margin: 5% 10%;
+  background: #a6a6a6;
+  box-shadow: 18px 24px 17px 4px rgba(0, 0, 0, 0.75);
+}
+@media screen and (max-width: 768px) {
+  main {
+    width: 100%;
+    margin: 0;
+  }
+}
+main nav {
+  width: 100%;
+  background: #0c0c0c;
+  padding: 4% 5% 1%;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  main nav {
+    justify-content: space-around;
+  }
+}
+main nav address {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  color: #a6a6a6;
+  visibility: visible;
+}
+@media screen and (max-width: 550px) {
+  main nav address {
+    font-size: 0.8rem;
+  }
+}
+main nav div {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+main nav div a {
+  padding: 0 2%;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #a6a6a6;
+}
+main nav div a:hover {
+  color: #7f7f7f;
+}
+main .me {
+  padding: 5%;
+  margin-bottom: -5%;
+  width: 85%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  main .me {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 550px) {
+  main .me {
+    justify-content: center;
+  }
+}
+main .me .pic {
+  width: 30%;
+}
+main .me .pic img {
+  margin-right: 2%;
+  max-width: 100%;
+  height: auto;
+}
+main .me .title {
+  display: flex;
+  flex-flow: column;
+  color: #212121;
+  padding-left: 3%;
+}
+main .me .title h1 {
+  font-size: 3.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin-bottom: 6.5%;
+}
+main .me .title h2 {
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+main hr {
+  margin: 5%;
+  border-top: 1px solid #0c0c0c;
+  border-bottom: 1px solid #0c0c0c;
+  background: #0c0c0c;
+}
+main .summary {
+  padding: 0 5%;
+}
+main .summary h2 {
+  font-size: 2.5rem;
+  padding-bottom: 1%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+main .summary p {
+  line-height: 1.2;
+}
+main .skills {
+  display: flex;
+  padding-bottom: 5%;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  main .skills {
+    flex-flow: column;
+  }
+}
+main .skills .employment {
+  width: 65%;
+  padding: 0 5%;
+}
+@media screen and (max-width: 768px) {
+  main .skills .employment {
+    width: 100%;
+  }
+}
+main .skills .employment h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+main .skills .employment .title-date {
+  display: flex;
+  justify-content: space-between;
+}
+main .skills .employment .title-date h3 {
+  font-style: italic;
+  padding-bottom: 2%;
+}
+main .skills .employment p {
+  padding-bottom: 4%;
+}
+main .skills .skill-highlight {
+  display: flex;
+  flex-flow: column;
+  width: 35%;
+  background: #262626;
+  color: #a6a6a6;
+  margin-right: 5%;
+  padding: 5%;
+  border-radius: 20px;
+  box-shadow: 15px 16px 17px -4px rgba(0, 0, 0, 0.75);
+}
+@media screen and (max-width: 768px) {
+  main .skills .skill-highlight {
+    width: 90%;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: auto;
+  }
+}
+main .skills .skill-highlight .skill-title {
+  height: 25%;
+}
+main .skills .skill-highlight .skill-title h2 {
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  padding: 5% 0;
+  margin: auto;
+}
+@media screen and (max-width: 780px) {
+  main .skills .skill-highlight .skill-title h2 {
+    width: 100%;
+  }
+}
+main .skills .skill-highlight .front-end,
+main .skills .skill-highlight .back-end {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  height: 25%;
+  padding: 5% 0;
+}
+@media screen and (max-width: 768px) {
+  main .skills .skill-highlight .front-end,
+  main .skills .skill-highlight .back-end {
+    flex-flow: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 1% 5%;
+  }
+}
+main .skills .skill-highlight .front-end h2,
+main .skills .skill-highlight .back-end h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 2%;
+}
+main .skills .skill-highlight .front-end ul,
+main .skills .skill-highlight .back-end ul {
+  list-style: circle;
+  width: 45%;
+}
+@media screen and (max-width: 768px) {
+  main .skills .skill-highlight .front-end ul,
+  main .skills .skill-highlight .back-end ul {
+    width: 100%;
+    line-height: 1.5;
+    padding: 10%;
+  }
+}
+main .skills .skill-highlight .front-end li,
+main .skills .skill-highlight .back-end li {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin-left: 20%;
+  line-height: 1.2;
+}
+main .skills .skill-highlight .links {
+  display: flex;
+  height: 25%;
+  color: black;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  main .skills .skill-highlight .links {
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    justify-content: space-around;
+  }
+}
+main .skills .skill-highlight a i {
+  color: purple;
+  transition: ease-out;
+  transition-duration: 0.2s;
+}
+main .skills .skill-highlight a i:hover {
+  transform: scale(1.07, 1.07);
+}
+main .skills button {
+  width: 150px;
+  height: 40px;
+  padding: 5%;
+  margin: 20% auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  background: #a6a6a6;
+  border: 1px solid #0c0c0c;
+  border-radius: 8px;
+  transition: ease-in-out;
+  transition-duration: 0.15s;
+  box-shadow: 0px 1.5px 0px 0px rgba(0, 0, 0, 0.75);
+  color: #000000;
+}
+@media screen and (max-width: 768px) {
+  main .skills button {
+    margin: auto;
+  }
+}
+main .skills button:hover {
+  background: #666666;
+  color: #e5e5e5;
+}
+main .skills button:active {
+  box-shadow: none;
+  transform: translateY(1px);
+}
+footer {
+  color: #0c0c0c;
+  text-align: center;
+  padding: 5% 0;
+}
