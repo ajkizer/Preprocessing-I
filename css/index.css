@@ -86,7 +86,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: calc(1rem + ((1vw - 4.8px) * 1.1111));
   font: inherit;
   vertical-align: baseline;
 }
@@ -131,42 +131,68 @@ table {
   box-sizing: border-box;
 }
 .border {
-  border: 1px solid #0a0a0a;
+  border: 1px solid #404040;
 }
 html,
 body {
   height: 100%;
-  background: #0f0f0f;
+  background: #262626;
 }
 main {
   width: 80%;
   margin: 5% 10%;
-  background: #686868;
-  border: 1px solid #0a0a0a;
+  background: #a6a6a6;
+  box-shadow: 18px 24px 17px 4px rgba(0, 0, 0, 0.75);
+}
+@media screen and (max-width: 768px) {
+  main {
+    width: 100%;
+    margin: 0;
+  }
 }
 nav {
   width: 100%;
-  background: #0a0a0a;
-  padding: 3% 0;
+  background: #404040;
+  padding: 3% 5%;
   display: flex;
   justify-content: flex-end;
+}
+@media screen and (max-width: 768px) {
+  nav {
+    justify-content: space-around;
+  }
 }
 nav a {
   padding: 0 2%;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   text-decoration: none;
-  color: #686868;
+  color: #a6a6a6;
+}
+nav a:hover {
+  color: #7f7f7f;
 }
 .me {
   padding: 5%;
+  margin-bottom: -5%;
   width: 85%;
   display: flex;
+  flex-flow: row wrap;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .me {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .me {
+    justify-content: center;
+  }
 }
 .me .pic {
-  width: 50%;
+  width: 30%;
 }
 .me .pic img {
   margin-right: 2%;
@@ -176,11 +202,11 @@ nav a {
 .me .title {
   display: flex;
   flex-flow: column;
-  color: #0a0a0a;
+  color: #212121;
   padding-left: 3%;
 }
 .me .title h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
@@ -195,11 +221,16 @@ nav a {
   font-size: 1rem;
   padding: 5% 0;
 }
+@media screen and (max-width: 550px) {
+  .me .title address {
+    font-size: 0.8rem;
+  }
+}
 hr {
   margin: 5%;
-  border-top: 1px solid #0a0a0a;
-  border-bottom: 1px solid #0a0a0a;
-  background: #0a0a0a;
+  border-top: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+  background: #404040;
 }
 .summary {
   padding: 0 5%;
@@ -215,14 +246,24 @@ hr {
 }
 .skills {
   display: flex;
+  padding-bottom: 5%;
+}
+@media screen and (max-width: 768px) {
+  .skills {
+    flex-flow: column;
+  }
 }
 .skills .employment {
-  width: 70%;
+  width: 65%;
   padding: 0 5%;
+}
+@media screen and (max-width: 768px) {
+  .skills .employment {
+    width: 100%;
+  }
 }
 .skills .employment h2 {
   font-size: 1.5rem;
-  padding-top: 2%;
   font-weight: bold;
 }
 .skills .employment .title-date {
@@ -233,31 +274,135 @@ hr {
   font-style: italic;
   padding-bottom: 2%;
 }
+.skills .employment p {
+  padding-bottom: 2%;
+}
 .skills .skill-highlight {
   display: flex;
   flex-flow: column;
-  width: 30%;
+  width: 35%;
+  background: #262626;
+  color: #a6a6a6;
+  margin-right: 5%;
+  padding: 5%;
+  border-radius: 20px;
+  box-shadow: 15px 16px 17px -4px rgba(0, 0, 0, 0.75);
+}
+@media screen and (max-width: 768px) {
+  .skills .skill-highlight {
+    width: 90%;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: auto;
+  }
+}
+.skills .skill-highlight .skill-title {
+  height: 25%;
+}
+.skills .skill-highlight .skill-title h2 {
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  padding: 5% 0;
+  margin: auto;
+}
+@media screen and (max-width: 780px) {
+  .skills .skill-highlight .skill-title h2 {
+    width: 100%;
+  }
 }
 .skills .skill-highlight .front-end,
 .skills .skill-highlight .back-end {
-  height: 33%;
-  margin: 0 10%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  height: 25%;
+  padding: 5% 0;
+}
+@media screen and (max-width: 768px) {
+  .skills .skill-highlight .front-end,
+  .skills .skill-highlight .back-end {
+    flex-flow: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 1% 5%;
+  }
 }
 .skills .skill-highlight .front-end h2,
 .skills .skill-highlight .back-end h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 2%;
 }
 .skills .skill-highlight .front-end ul,
 .skills .skill-highlight .back-end ul {
   list-style: circle;
-  padding: 5%;
+  width: 45%;
+}
+@media screen and (max-width: 768px) {
+  .skills .skill-highlight .front-end ul,
+  .skills .skill-highlight .back-end ul {
+    width: 100%;
+    line-height: 1.5;
+    padding: 10%;
+  }
 }
 .skills .skill-highlight .front-end li,
 .skills .skill-highlight .back-end li {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+  margin-left: 20%;
+  line-height: 1.2;
 }
 .skills .skill-highlight .links {
-  height: 33%;
+  display: flex;
+  height: 25%;
+  color: black;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .skills .skill-highlight .links {
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    justify-content: space-around;
+  }
+}
+.skills .skill-highlight a i {
+  color: purple;
+  transition: ease-out;
+  transition-duration: 0.2s;
+}
+.skills .skill-highlight a i:hover {
+  transform: scale(1.07, 1.07);
+}
+.skills button {
+  width: 60%;
+  height: 15%;
+  padding: 1.5%;
+  margin: 20% auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  background: #a6a6a6;
+  border: 1px solid #404040;
+  border-radius: 8px;
+  transition: ease-in-out;
+  transition-duration: 0.15s;
+  box-shadow: 0px 1.5px 0px 0px rgba(0, 0, 0, 0.75);
+  color: #333333;
+}
+@media screen and (max-width: 768px) {
+  .skills button {
+    margin: auto;
+  }
+}
+.skills button:hover {
+  background: #666666;
+}
+.skills button:active {
+  box-shadow: none;
+  transform: translateY(1px);
 }
