@@ -150,7 +150,7 @@ main {
     margin: 0;
   }
 }
-nav {
+main nav {
   width: 100%;
   background: #404040;
   padding: 3% 5%;
@@ -158,21 +158,21 @@ nav {
   justify-content: flex-end;
 }
 @media screen and (max-width: 768px) {
-  nav {
+  main nav {
     justify-content: space-around;
   }
 }
-nav a {
+main nav a {
   padding: 0 2%;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   text-decoration: none;
   color: #a6a6a6;
 }
-nav a:hover {
+main nav a:hover {
   color: #7f7f7f;
 }
-.me {
+main .me {
   padding: 5%;
   margin-bottom: -5%;
   width: 85%;
@@ -182,102 +182,105 @@ nav a:hover {
   align-items: center;
 }
 @media screen and (max-width: 768px) {
-  .me {
+  main .me {
     width: 100%;
   }
 }
 @media screen and (max-width: 550px) {
-  .me {
+  main .me {
     justify-content: center;
   }
 }
-.me .pic {
+main .me .pic {
   width: 30%;
 }
-.me .pic img {
+main .me .pic img {
   margin-right: 2%;
   max-width: 100%;
   height: auto;
 }
-.me .title {
+main .me .title {
   display: flex;
   flex-flow: column;
   color: #212121;
   padding-left: 3%;
 }
-.me .title h1 {
+main .me .title h1 {
   font-size: 3.5rem;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
+  margin-bottom: 6.5%;
 }
-.me .title h2 {
+main .me .title h2 {
   font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
 }
-.me .title address {
+main .me .title address {
   display: flex;
   flex-flow: column;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   padding: 5% 0;
+  visibility: hidden;
 }
 @media screen and (max-width: 550px) {
-  .me .title address {
+  main .me .title address {
     font-size: 0.8rem;
   }
 }
-hr {
+main hr {
   margin: 5%;
   border-top: 1px solid #404040;
   border-bottom: 1px solid #404040;
   background: #404040;
 }
-.summary {
+main .summary {
   padding: 0 5%;
 }
-.summary h2 {
+main .summary h2 {
   font-size: 2.5rem;
   padding-bottom: 1%;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
-.summary p {
+main .summary p {
   line-height: 1.2;
 }
-.skills {
+main .skills {
   display: flex;
   padding-bottom: 5%;
+  align-items: center;
 }
 @media screen and (max-width: 768px) {
-  .skills {
+  main .skills {
     flex-flow: column;
   }
 }
-.skills .employment {
+main .skills .employment {
   width: 65%;
   padding: 0 5%;
 }
 @media screen and (max-width: 768px) {
-  .skills .employment {
+  main .skills .employment {
     width: 100%;
   }
 }
-.skills .employment h2 {
+main .skills .employment h2 {
   font-size: 1.5rem;
   font-weight: bold;
 }
-.skills .employment .title-date {
+main .skills .employment .title-date {
   display: flex;
   justify-content: space-between;
 }
-.skills .employment .title-date h3 {
+main .skills .employment .title-date h3 {
   font-style: italic;
   padding-bottom: 2%;
 }
-.skills .employment p {
-  padding-bottom: 2%;
+main .skills .employment p {
+  padding-bottom: 4%;
 }
-.skills .skill-highlight {
+main .skills .skill-highlight {
   display: flex;
   flex-flow: column;
   width: 35%;
@@ -289,17 +292,17 @@ hr {
   box-shadow: 15px 16px 17px -4px rgba(0, 0, 0, 0.75);
 }
 @media screen and (max-width: 768px) {
-  .skills .skill-highlight {
+  main .skills .skill-highlight {
     width: 90%;
     flex-flow: row wrap;
     justify-content: center;
     margin: auto;
   }
 }
-.skills .skill-highlight .skill-title {
+main .skills .skill-highlight .skill-title {
   height: 25%;
 }
-.skills .skill-highlight .skill-title h2 {
+main .skills .skill-highlight .skill-title h2 {
   font-size: 2.5rem;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -307,12 +310,12 @@ hr {
   margin: auto;
 }
 @media screen and (max-width: 780px) {
-  .skills .skill-highlight .skill-title h2 {
+  main .skills .skill-highlight .skill-title h2 {
     width: 100%;
   }
 }
-.skills .skill-highlight .front-end,
-.skills .skill-highlight .back-end {
+main .skills .skill-highlight .front-end,
+main .skills .skill-highlight .back-end {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -320,8 +323,8 @@ hr {
   padding: 5% 0;
 }
 @media screen and (max-width: 768px) {
-  .skills .skill-highlight .front-end,
-  .skills .skill-highlight .back-end {
+  main .skills .skill-highlight .front-end,
+  main .skills .skill-highlight .back-end {
     flex-flow: column;
     width: 50%;
     justify-content: center;
@@ -329,60 +332,60 @@ hr {
     padding: 1% 5%;
   }
 }
-.skills .skill-highlight .front-end h2,
-.skills .skill-highlight .back-end h2 {
+main .skills .skill-highlight .front-end h2,
+main .skills .skill-highlight .back-end h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   width: 100%;
   margin-bottom: 2%;
 }
-.skills .skill-highlight .front-end ul,
-.skills .skill-highlight .back-end ul {
+main .skills .skill-highlight .front-end ul,
+main .skills .skill-highlight .back-end ul {
   list-style: circle;
   width: 45%;
 }
 @media screen and (max-width: 768px) {
-  .skills .skill-highlight .front-end ul,
-  .skills .skill-highlight .back-end ul {
+  main .skills .skill-highlight .front-end ul,
+  main .skills .skill-highlight .back-end ul {
     width: 100%;
     line-height: 1.5;
     padding: 10%;
   }
 }
-.skills .skill-highlight .front-end li,
-.skills .skill-highlight .back-end li {
+main .skills .skill-highlight .front-end li,
+main .skills .skill-highlight .back-end li {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   margin-left: 20%;
   line-height: 1.2;
 }
-.skills .skill-highlight .links {
+main .skills .skill-highlight .links {
   display: flex;
   height: 25%;
   color: black;
   justify-content: space-between;
 }
 @media screen and (max-width: 768px) {
-  .skills .skill-highlight .links {
+  main .skills .skill-highlight .links {
     width: 100%;
     height: auto;
     margin-top: 5%;
     justify-content: space-around;
   }
 }
-.skills .skill-highlight a i {
+main .skills .skill-highlight a i {
   color: purple;
   transition: ease-out;
   transition-duration: 0.2s;
 }
-.skills .skill-highlight a i:hover {
+main .skills .skill-highlight a i:hover {
   transform: scale(1.07, 1.07);
 }
-.skills button {
-  width: 60%;
-  height: 15%;
-  padding: 1.5%;
+main .skills button {
+  width: 150px;
+  height: 40px;
+  padding: 5%;
   margin: 20% auto;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -395,14 +398,14 @@ hr {
   color: #333333;
 }
 @media screen and (max-width: 768px) {
-  .skills button {
+  main .skills button {
     margin: auto;
   }
 }
-.skills button:hover {
+main .skills button:hover {
   background: #666666;
 }
-.skills button:active {
+main .skills button:active {
   box-shadow: none;
   transform: translateY(1px);
 }
