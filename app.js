@@ -18,10 +18,6 @@ function typeWriter() {
     typetext.innerHTML += txt.charAt(i);
     i++;
     setTimeout(typeWriter, Math.random() * 120 + 130);
-  } else {
-    setTimeout(function() {
-      document.getElementById("address").style.visibility = "visible";
-    }, 500);
   }
 }
 
